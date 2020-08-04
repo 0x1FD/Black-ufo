@@ -186,4 +186,24 @@ else
 fi 
 
 
+
+if command -v hydra >/dev/null; then
+	printf $grn 
+	echo "$good hydra" 
+	printf $end
+else
+	printf $red 
+	echo "$bad hydra" 
+	printf $end
+	$packed  hydra 
+fi
+
+
+clear 
+
+printf $blu 
 echo "Done!"
+printf $end 
+exit 0
+
+
