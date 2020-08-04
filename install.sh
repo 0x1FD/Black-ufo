@@ -3,11 +3,6 @@ name="Black-ufo"
 username=$(whoami)
 LIP=$(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1')
 
-
-
-
-
-
 #check for packet manager
 which apt >/dev/null 2>&1
 if [ $? -eq 0 ]
