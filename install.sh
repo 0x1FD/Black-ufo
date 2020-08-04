@@ -135,3 +135,54 @@ else
 fi
 #Mon Aug  3 23:09:58 PDT 2020
 #end
+#Tue Aug  4 11:54:07 PDT 2020
+#start
+if [ $msf1 == "true" ]; then
+  printf $grn
+  echo "$good msfconsole"
+  printf $end
+else
+  printf $grn
+  echo "$bad msfconsole"
+  printf $end
+fi
+
+if [ $msf2 == "true" ]; then
+  printf $grn
+  echo "$good msfvenom "
+  printf $end
+else
+  printf $grn
+  echo "$bad msfvenom "
+  printf $end
+fi
+
+if [ $msf1 == "false" ]; then
+  echo "Metasploit-framework not found"
+  echo "Do you have metasploit repository?"
+  echo "(y/n)"
+  read -p "Answer: " answ 
+fi
+
+if [ $answ == "y" ]; then
+  echo "Installing Metasploit-framework"
+  $packed metasploit
+  $packed metasploit-framework
+else
+  echo "Installing metasploit-framework"
+  curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall
+  touch exec1
+fi
+
+if command -v nmap >/dev/null;
+  printf $grn
+  echo "$good nmap "
+  printf $end
+else
+  printf $red
+  echo "$bad nmap "
+  printf $end
+  $packed nmap
+fi 
+
+
