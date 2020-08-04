@@ -119,3 +119,16 @@ else
   printf $end
   
 fi
+
+if command -v msfconsole >/dev/null;
+then
+  msf1="true"
+else
+  msf1="false"
+fi
+
+if command -v msfvenom >/dev/null;
+then
+  msf2="true"
+else
+  msf2="false"
