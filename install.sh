@@ -112,8 +112,10 @@ then
 else
   printf $red
   echo "$bad netcat not found!"
+  printf $end
   #install netcat
+  printf $yel
   $packed netcat
-  
+  printf $end
   
 fi
