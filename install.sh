@@ -27,7 +27,7 @@ else
 fi
 #check-end
 #start installer!
-if ping -c 1 google.com >/dev/null; 2>/dev/null
+if ping -c 1 google.com >/dev/null;
 then
   printf $grn
   echo "[√] connection to network"
