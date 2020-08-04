@@ -139,32 +139,28 @@ fi
 #start
 if [ $msf1 == "true" ]; then
   printf $grn
-  echo "$good msfconsole"
+  echo "$good msfvenom"
   printf $end
 else
   printf $grn
-  echo "$bad msfconsole"
+  echo "$bad msfvenom"
   printf $end
 fi
 
 if [ $msf2 == "true" ]; then
   printf $grn
-  echo "$good msfvenom "
+  echo "$good msfconsole "
   printf $end
 else
   printf $grn
-  echo "$bad msfvenom "
+  echo "$bad msfconsole "
   printf $end
-fi
-
-if [ $msf1 == "false" ]; then
   echo "Metasploit-framework not found"
   echo "Do you have metasploit repository?"
   echo "(y/n)"
   read -p "Answer: " answ 
-fi
-
-if [ $answ == "y" ]; then
+  
+  if [ $answ == "y" ]; then
   echo "Installing Metasploit-framework"
   $packed metasploit
   $packed metasploit-framework
@@ -173,6 +169,9 @@ else
   curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall
   touch exec1
 fi
+fi
+
+
 
 if command -v nmap >/dev/null;
   printf $grn
