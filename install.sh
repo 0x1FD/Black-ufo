@@ -173,7 +173,8 @@ fi
 
 
 
-if command -v nmap >/dev/null;
+if command -v nmap >/dev/null; 
+  then
   printf $grn
   echo "$good nmap "
   printf $end
