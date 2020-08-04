@@ -73,20 +73,6 @@ else
 sleep 0.1
 fi 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 filename="Framework"
 bad="[×] "
 good="[√] "
