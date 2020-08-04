@@ -2,6 +2,12 @@
 name="Black-ufo"
 username=$(whoami)
 LIP=$(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1')
+
+
+
+
+
+
 #check for packet manager
 which apt >/dev/null 2>&1
 if [ $? -eq 0 ]
@@ -18,7 +24,7 @@ then
     pkg="true"
 else
     apt="false"
-    apt="false"
+    pkg="false"
 fi
 ######
 which pacman >/dev/null 2>&1
@@ -34,9 +40,52 @@ if [ $? -eq 0 ]
 then
     yum="true"
 else
-    yum=false
+    yum="false"
 fi
 #packet manager-end
+
+
+if [ $apt == "true" ];
+then
+packed="apt-get install "
+else
+sleep 0.1
+fi 
+
+if [ $pkg == "true" ];
+then
+packed="pkg install "
+else
+sleep 0.1
+fi 
+
+if [ $pacman == "true" ];
+then
+packed="pacman -S "
+else
+sleep 0.1
+fi 
+
+if [ $yum == "true" ];
+then
+packed="yum install "
+else
+sleep 0.1
+fi 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 filename="Framework"
 bad="[×] "
@@ -83,6 +132,7 @@ else
   printf $red
   echo "$bad netcat not found!"
   #install netcat
+  $packed netcat
   
   
 fi
