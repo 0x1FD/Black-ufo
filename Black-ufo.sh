@@ -53,7 +53,7 @@ if [ -f $filename ]; then
   echo "$good $filename found!"
   else
   echo "$bad $filename not found!"
-
+fi 
 
 echo "STARTING THE FRAMEWORK......." 
 
