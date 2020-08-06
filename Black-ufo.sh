@@ -54,6 +54,6 @@ fi
 
 echo "STARTING THE FRAMEWORK......." 
 
-read -p "${underline}msf0> ${normal}" msf0
+read -p "${underline}msf0>${normal} " msf0
 
 echo "$msf0"
