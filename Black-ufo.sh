@@ -49,7 +49,10 @@ else
    echo "$good Black-ufo"
 fi
 
-
+if [ -f $filename ]; then
+  echo "$good $filename found!"
+  else
+  echo "$bad $filename not found!"
 
 
 echo "STARTING THE FRAMEWORK......." 
@@ -57,3 +60,4 @@ echo "STARTING THE FRAMEWORK......."
 read -p "${underline}msf0>${normal} " msf0
 
 echo "$msf0"
+
