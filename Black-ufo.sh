@@ -1,6 +1,11 @@
 #!/bin/bash
 #Black-ufo 
 #made by: Oak atsume 
+underline=`tput smul`
+nounderline=`tput rmul`
+bold=`tput bold`
+normal=`tput sgr0`
+
 FILE="exec1"     
 name="Black-ufo"
 username=$(whoami)
@@ -47,5 +52,8 @@ fi
 
 
 
-echo "STARTING THE FRAMEWORK......."
+echo "STARTING THE FRAMEWORK......." 
 
+read -p "${underline}msf0> ${normal}" msf0
+
+echo "$msf0"
