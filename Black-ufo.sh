@@ -3,7 +3,8 @@
 #made by: Oak atsume 
 source import.sh 
 
-import ip-file.sh
+$import ip-file.sh
+$import commands.sh 
 
 underline=`tput smul`
 nounderline=`tput rmul`
@@ -58,9 +59,7 @@ if [ -f $filename ]; then
   echo "$bad $filename not found!"
 fi 
 
-echo "Welcome \n your ip is \n IP: "
-LIP 
+echo -e "Welcome \n your ip is \n IP: $LIP"
+
 read -p "${underline}msf0>${normal} " msf0
-
-
 
