@@ -1,6 +1,10 @@
 #!/bin/bash
 #Black-ufo 
 #made by: Oak atsume 
+source import.sh 
+
+import ip-file.sh
+
 underline=`tput smul`
 nounderline=`tput rmul`
 bold=`tput bold`
@@ -9,8 +13,7 @@ normal=`tput sgr0`
 FILE="exec1"     
 name="Black-ufo"
 username=$(whoami)
-LIP=$(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1')
-####################################################################################################################
+
 filename="Framework"
 bad="[×] "
 good="[√] "
@@ -55,9 +58,9 @@ if [ -f $filename ]; then
   echo "$bad $filename not found!"
 fi 
 
-echo "STARTING THE FRAMEWORK......." 
-
+echo "Welcome \n your ip is \n IP: "
+LIP 
 read -p "${underline}msf0>${normal} " msf0
 
-echo "$msf0"
+
 
