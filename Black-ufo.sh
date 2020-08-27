@@ -181,12 +181,3 @@ fi
 #OwO
 
 #IF THE IMPUT IS EMPTY
-NULT="$NULL"
-if [ -z "$msf0" ]
-then
-   echo "THE INPUT IS EMPTY $NULT"
-fi
-echo "THANK YOU FOR USING BLACK-UFO EXPLOIT SYSTEM"
-
-read 
-
