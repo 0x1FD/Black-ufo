@@ -18,18 +18,9 @@
 #nmap --script nmap-vulners -sV $TARGET
 
 #made by: Oak atsume
+
 ip=$(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1')
-#sniper
-sp="/-\|"
-sc=0
-spin() {
-   printf "\b${sp:sc++:1}"
-   ((sc==${#sp})) && sc=0
-}
-endspin() {
-   printf "\r%s\n" "$@"
-}
-#spiner-end
+
 
 underline=`tput smul`
 nounderline=`tput rmul`
